@@ -15,7 +15,7 @@ class Home extends BaseController
 
         // You can pass data to the view using the $data array
         // The data will be accessible in all views that are loaded not just the view you pass it to
-        return view('templates/header', $data) . view('pages/home') . view('templates/footer');
+        return view('templates/header', $data).view('templates/introduction') . view('pages/home') . view('templates/footer') . view('templates/location');
     }
 
     public function showme($page) {

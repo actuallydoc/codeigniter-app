@@ -1,5 +1,5 @@
 <section class="container">
-    <div class="search-results">
+    <div class="search-results" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; align-content: center">
         <h4>Search results</h4>
         <p>Found: <?= count($posts)?></p>
     </div>
@@ -8,7 +8,7 @@
             <div class="container">
                 <?php foreach ($posts as $post) : ?>
                     <div class="card">
-                        <div id="test-card" class="card-body">
+                        <div id="test-card" class="card-body" style="background-color: #f1f1f1; border-radius: 5px; padding: 20px;">
                             <h2><?= esc($post['title']) ?></h2>
                             <p><?= esc($post['body']) ?></p>
                             <p><a href="/blog/<?= esc($post['slug'], 'url') ?>">View article</a></p>

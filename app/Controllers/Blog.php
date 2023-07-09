@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Controllers;
-
 use App\Models\BlogModel;
-
 class Blog extends BaseController
 {
     public function post($slug) {
@@ -26,8 +24,6 @@ class Blog extends BaseController
 
         return view('templates/header', $data) . view('blog/post') . view('templates/footer');
     }
-
-
     public function create() {
         // This kind of helper functions only load when u do a request so it doesn't load on every page and slow down the app
         helper('form');
